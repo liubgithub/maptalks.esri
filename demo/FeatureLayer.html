@@ -7,10 +7,9 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Document</title>
         <!-- maptalks -->
-        <!--<link rel="stylesheet" href="./../node_modules/maptalks/dist/maptalks.css">
-        <script src="./../node_modules/maptalks/dist/maptalks.js"></script>-->
-        <link href="../maptalks/maptalks.css" rel="stylesheet" />
-        <script src="../maptalks/maptalks.js"></script>
+       <link rel="stylesheet" href="./../node_modules/maptalks/dist/maptalks.css">
+        <script src="./../node_modules/maptalks/dist/maptalks.js"></script>
+        <!--<script src="../maptalks/maptalks.js"></script>-->
         <!-- maptalks.esri -->
         <!--<script src="./../dist/maptalks.esri.js"></script>-->
         <script src="../dist/maptalks.esri.js"></script>
@@ -30,12 +29,13 @@
                 },
                 baseLayer: new maptalks.TileLayer('base', {
                     urlTemplate: 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
-                    subdomains: ['a', 'b', 'c', 'd']
+                    subdomains: ['a', 'b', 'c', 'd'],
+                    rnederer:'canvas'
                 })
             });
             var flayer = new maptalks.esri.FeatureLayer('flayer','http://117.36.75.134:6080/arcgis/rest/services/LT/WBJ/FeatureServer/1',{
                 symbol:{
-                    markerFile:'images/apple.png'
+                    markerFile:'images/apple.png',
                     lineColor: 'red'
                 }
             });
